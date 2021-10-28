@@ -1,60 +1,64 @@
 <DOCTYPE html>
-    <html>
-        <body>
-            <div style="text-align:center">
-                <p><b>Insira a ID</b></p>
-                <input type="number" id="idBio">
-                <p></p>
+    <html><!-- abertura do html -->
+        <body><!-- abertura do corpo -->
+            <div style="text-align:center"><!-- formatação centralizada -->
 
-                <button onclick="escolherBio()">Revelar Bio</button>
+                <p><b>Insira a ID</b></p><!-- título negritado com breve instrução do que deve ser feito -->
 
-                <p>Bio:</p>
+                <input type="number" id="idBio"><!-- componente input -->
+
+                <p></p><!-- criar parágrafo vazio -->
+
+                <button onclick="escolherBio()">Revelar Bio</button><!-- botão para chamar a função  -->
+
+                <p>Bio:</p><!-- parágrafo com subtítulo  -->
                 
+                <p id="Bio"></p> <!-- impressão do resultado -->                
 
-                <p id="Bio"></p>
-            </div>
+            </div><!-- fim da formação centralizada -->
 
             <script>
-                function escolherBio() {
+                function escolherBio() { //nome da função
                     
-                    let pessoas = [
+                    let pessoas = [ // declaração de lista de pessoas 
                         {
-                            id: 1, 
-                            name: 'Ada Lovelace',
-                            bio: 'Ada Lovelace, foi uma matemática e escritora inglesa reconhecida por ter escrito o primeiro algoritmo para ser processado por uma máquina'
+                            id: 1, //declaração do id pessoa 1
+                            name: 'Ada Lovelace', //declaração do nome da pessoa 1
+                            bio: 'Ada Lovelace, foi uma matemática e escritora inglesa reconhecida por ter escrito o primeiro algoritmo para ser processado por uma máquina'//declaração da bio pessoa 1
                         },
                         {
-                            id: 2,
-                            name: 'Alan Turing',
-                            bio: 'Alan Turing foi um matemático, cientista da computação, lógico, criptoanalista, filósofo e biólogo teórico britânico, ele é amplamente considerado o pai da ciência da computação teórica e da inteligência artificial'
+                            id: 2, //declaração do id pessoa 2
+                            name: 'Alan Turing',//declaração do nome da pessoa 2
+                            bio: 'Alan Turing foi um matemático, cientista da computação, lógico, criptoanalista, filósofo e biólogo teórico britânico, ele é amplamente considerado o pai da ciência da computação teórica e da inteligência artificial'//declaração da bio pessoa 2
                         },
                         {
-                            id: 3,
-                            name: 'Nikola Tesla',
-                            bio: 'Nikola Tesla foi um inventor, engenheiro eletrotécnico e engenheiro mecânico sérvio, mais conhecido por suas contribuições ao projeto do moderno sistema de fornecimento de eletricidade em corrente alternada.'
+                            id: 3,//declaração do id pessoa 3
+                            name: 'Nikola Tesla',// declaração do nome da pessoa 3
+                            bio: 'Nikola Tesla foi um inventor, engenheiro eletrotécnico e engenheiro mecânico sérvio, mais conhecido por suas contribuições ao projeto do moderno sistema de fornecimento de eletricidade em corrente alternada.'//declaração da bio pessoa 3
                         },
                         {
-                            id: 4, 
-                            name: 'Nicolau Copérnico', 
-                            bio: 'Nicolau Copérnico foi um astrônomo e matemático polonês que desenvolveu a teoria heliocêntrica do Sistema Solar.'
+                            id: 4, //declaração do id pessoa 4
+                            name: 'Nicolau Copérnico', //declaração do nome da pessoa 4
+                            bio: 'Nicolau Copérnico foi um astrônomo e matemático polonês que desenvolveu a teoria heliocêntrica do Sistema Solar.'//declaração da bio pessoa 4
                         }
                     ];
 
-                    let idEscolhido = document.getElementById("idBio").value;
+                    let idEscolhido = document.getElementById("idBio").value; //declaração de variável do id escolhido
+                    //busca do valor da variável
 
-                    let bioEscolhida = 'pessoa não cadastrada';
+                    let bioEscolhida = 'pessoa não cadastrada'; //declaração de variável iniciando com mensagem caso id/bio seja inexistente
 
-                    pessoas.forEach(pessoa => {
-                        if (pessoa.id == idEscolhido) {
+                    pessoas.forEach(pessoa => {//laço para percorrer a lista
+                        if (pessoa.id == idEscolhido) {//comparar id escolhido com as pessoas que o laço está percorrendo
 
-                            bioEscolhida = pessoa.bio;
+                            bioEscolhida = pessoa.bio; //recebea na variável bio escolhida a pessoa selecionada
                         
-                        }
-                    });
+                        }//fim do laço 
+                    }); //fim da função
                    
-                    document.getElementById("Bio").innerHTML = bioEscolhida;
+                    document.getElementById("Bio").innerHTML = bioEscolhida; //recebe valor da bio da pessoa selecionada dentro do id bio do parágrafo
                 }
             </script>
-        </body>
-    </html>
+        </body><!-- fim do corpo -->
+    </html><!-- fim do html -->
 </DOCTYPE>
