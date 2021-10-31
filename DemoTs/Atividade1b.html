@@ -6,37 +6,17 @@
      
     <p>Insira uma palavra abaixo</p> <!--Breve orientação do que deve ser feito-->
 
-    <input type="text" id="myText" value="">  <!-- Componente input  -->
+    <input type="text" id="idTexto" value="">  <!-- Componente input  -->
 
     <p></p>
 
-    <button onclick="myFunction()">Click para contar as letras</button><!-- Botão para chamar a função -->
+    <button onclick="contarVogais()">Click para contar as letras</button><!-- Botão para chamar a função -->
 
     <p>Quantidade de Vogais:</p> <!-- subtítulo resultado -->
 
-    <p id="QuantidaDeVogais"></p> <!-- impressão do número de vogais da palavra inserida -->
+    <p id="IdQuantidaDeVogais"></p> <!-- impressão do número de vogais da palavra inserida -->
 
-    <script>
-        
-        function myFunction() {
-
-            var letras = document.getElementById("myText").value;// criação da variável
-
-            var contador = 0; //criação a variável contador e para iniciar com 0.
-
-            for (var i = 0; i < letras.length; i++) {//laço de repetição para percorrer os caracteres da palavra
-
-                var letra = letras.charAt(i); //atribuir a uma variável a letra atual do laço
-
-                if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
-                    contador++;
-                }// if para estabelecer quais são as vogais e setar no contador a quantidade 
-
-            }
-            document.getElementById("QuantidaDeVogais").innerHTML = contador;
-            
-        }
-    </script>
+    <script src="Atividade1b.js"></script> <!--Chama o arquivo javascript-->
 
 </body>
 </html>
