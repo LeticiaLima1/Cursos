@@ -23,15 +23,12 @@ function escolherBio(idPessoa : any) : void{ //nome da função
         }
     ];
 
-    // let idEscolhido = (<HTMLInputElement>document.getElementById("idBio")).value; //declaração de variável do id escolhido
-    //busca do valor da variável
-
     let bioEscolhida = 'pessoa não cadastrada'; //declaração de variável iniciando com mensagem caso id/bio seja inexistente
 
     pessoas.forEach(pessoa => {//laço para percorrer a lista
         if (pessoa.id == idPessoa.value) {//comparar id escolhido com as pessoas que o laço está percorrendo
 
-            bioEscolhida = pessoa.bio; //recebe na variável bio escolhida a pessoa selecionada
+            bioEscolhida = pessoa.bio; //recebea na variável bio escolhida a pessoa selecionada
         
         }//fim do laço 
     }); //fim da função
