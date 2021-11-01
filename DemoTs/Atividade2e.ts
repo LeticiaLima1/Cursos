@@ -36,12 +36,12 @@ function escolherBio(idPessoa){ //nome da função
     }); //fim da função
     return bioEscolhida;
 }
-console.log("Funcional 2A escolherBio: "+escolherBio(idPessoa));
+console.log("Funcional 2A escolherBio: "+escolherBio(idPessoa));//imprime a bio escolhida
 
 //Atividade 2A paradigma
-const pessoaEscolhida  = pessoas.find(pessoa => pessoa.id == idPessoa);
-const bioPessoaEscolhida = pessoaEscolhida.bio;
-console.log("Paradigma 2A escolherBio: "+bioPessoaEscolhida);
+const pessoaEscolhida  = pessoas.find(pessoa => pessoa.id == idPessoa);//compara a pessoa escolhida com a pessoa a  ser buscada
+const bioPessoaEscolhida = pessoaEscolhida.bio;//recebe a bio escolhida do id selecionado
+console.log("Paradigma 2A escolherBio: "+bioPessoaEscolhida);// imprime a bio escolhida
 
 //Atividade 2B Funcional
 function escolherNome(idPessoa){ //nome da função
@@ -54,43 +54,45 @@ function escolherNome(idPessoa){ //nome da função
     }); //fim da função
     return nomeEscolhido;
 }
-console.log("Paradigma 2B escolherNome: "+escolherNome(idPessoa));
+console.log("Paradigma 2B escolherNome: "+escolherNome(idPessoa));//imprime o nome escolhido
 
 //Paradigma 2B Funcional
-const nomePessoaEscolhida = pessoaEscolhida.nome;
-console.log("Funcional 2B escolherNome: "+nomePessoaEscolhida);
+const nomePessoaEscolhida = pessoaEscolhida.nome;//recebe a pessoa escolhida 
+console.log("Funcional 2B escolherNome: "+nomePessoaEscolhida);//imprime nome escolhido
 
 //Atividade 2C Funcional
-function excluirId(idPessoa){
-    return pessoas.filter(pessoa => pessoa.id != idPessoa);
-}
-console.log("Funcional 2C excluirId:");
-console.log(excluirId(idPessoa));
+function excluirId(idPessoa){//nome da função
+    //busca o valor da variável
+    return pessoas.filter(pessoa => pessoa.id != idPessoa);//filtra dentre as pessoas pelo id repassado
+}//id diferente é excluído
+console.log("Funcional 2C excluirId:");//impressão
+console.log(excluirId(idPessoa));//imprime as pessoas que restaram, sem a excluída
 
 //Paradigma 2C Funcional
-const pessoasFiltradas = pessoas.filter(pessoa => pessoa.id != idPessoa);
-console.log("Paradigma 2C excluirId:");
-console.log(pessoasFiltradas);
+const pessoasFiltradas = pessoas.filter(pessoa => pessoa.id != idPessoa);//filtra dentre as pessoas pelo id repassado
+//id diferente é excluído
+console.log("Paradigma 2C excluirId:");//impressão
+console.log(pessoasFiltradas);//imprime as pessoas que restaram, sem a excluída
 
 //Atividade 2D Funcional
-const nomePessoa = 'Letícia'
-function alterarNome(idPessoa, nomePessoa){
-    pessoas.forEach(pessoa =>{
-        if(pessoa.id == idPessoa){
-            pessoa.nome = nomePessoa;
+const nomePessoa = 'Letícia'//declara a constante
+function alterarNome(idPessoa, nomePessoa){ //nome da função que busca pelo id que terá o nome alterado
+    pessoas.forEach(pessoa =>{//laço que irá percorrer a lista 
+        if(pessoa.id === idPessoa){//compara id escolhido com o id que terá o nome alterado
+            pessoa.nome = nomePessoa;//recebe o nome alterado
         }
     })
-    return pessoas;
+    return pessoas;//retorna a lista de pessoas com o nome já alterado
 }
 console.log("Funcional 2D alterarNome:");
-console.log(alterarNome(idPessoa, nomePessoa));
+console.log(alterarNome(idPessoa, nomePessoa));//imprima a alteração
 
-//Paradigma 2D Funcional
-const pessoasAlteradas = pessoas.map(pessoa => {
-    if(pessoa.id === idPessoa){
-        pessoa.nome = nomePessoa;
+//Paradigma 2D imperativo
+const pessoasAlteradas = pessoas.map(pessoa => {//declara a constante e retorna uma pessoa
+    if(pessoa.id === idPessoa){ //compara se o id e o tipo são iguais ao id que será alterado
+        pessoa.nome = nomePessoa; //recebe o nome alterado 
     }
     return pessoa;
 })
 console.log("Paradigma 2D alterarNome:");
-console.log(pessoasAlteradas);
+console.log(pessoasAlteradas);//imprime a alteração

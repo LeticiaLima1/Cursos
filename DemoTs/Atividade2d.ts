@@ -23,16 +23,16 @@ let pessoas = [ // declaração de lista de pessoas
 
 document.getElementById("idLista").innerHTML = JSON.stringify(pessoas); //recebe valor do nome da pessoa excluída
 
-function alterarNome(idPessoa : any, idNomePessoa : any) : void{
+function alterarNome(idPessoa : any, idNomePessoa : any) : void{//nome da função 
 
-    const idPessoaEscolhida = idPessoa.value;
+    const idPessoaEscolhida = idPessoa.value; //declaração da constante do id escolhido
+    //busca do valor da constante
+    const nomeInformado = idNomePessoa.value; //compara nome informado com a pessoa escolhida
 
-    const nomeInformado = idNomePessoa.value;
-
-    pessoas.forEach(pessoa =>{
-        if(pessoa.id == idPessoaEscolhida){
-            pessoa.name = nomeInformado;
+    pessoas.forEach(pessoa =>{//laço para percorrer a lista
+        if(pessoa.id == idPessoaEscolhida){//compara id escolhido com o id da pessoa escolhida
+            pessoa.name = nomeInformado; //altera o nome escolhido
         }
     })
-    document.getElementById("idlistaAtualizada").innerHTML = JSON.stringify(pessoas);
+    document.getElementById("idlistaAtualizada").innerHTML = JSON.stringify(pessoas);//recebe o novo nome
 }

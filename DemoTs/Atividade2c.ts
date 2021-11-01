@@ -23,8 +23,9 @@ let pessoas = [ // declaração de lista de pessoas
 
 document.getElementById("idLista").innerHTML = JSON.stringify(pessoas); //recebe valor do nome da pessoa excluída
 
-function excluirId(id : any) : void{
-    const idPessoa = id.value;
-    pessoas = pessoas.filter(pessoa => pessoa.id != idPessoa);
-    document.getElementById("idlistaFiltrada").innerHTML = JSON.stringify(pessoas);
+function excluirId(id : any) : void{//nome da função
+    const idPessoa = id.value;//declaração de constante do id escolhido
+    //busca do valor da constante
+    pessoas = pessoas.filter(pessoa => pessoa.id != idPessoa);//comparar pessoa selecionada de acordo com o filtro do que é procurado
+    document.getElementById("idlistaFiltrada").innerHTML = JSON.stringify(pessoas);//recebe o valor da pessoa filtrada já sem a pessoa excluída
 }

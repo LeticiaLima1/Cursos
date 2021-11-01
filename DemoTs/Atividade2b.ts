@@ -22,8 +22,8 @@ const pessoas = [ // declaração de lista de pessoas
 ];
 
 function escolherNome(id : any) : void{ //nome da função
-    const idEscolhido = id.value; //declaração de variável do id escolhido
-    //busca do valor da variável
+    const idEscolhido = id.value; //declaração da constante  do id escolhido
+    //busca do valor da constante
     let nomeEscolhido = 'pessoa não cadastrada'; //declaração de variável iniciando com mensagem caso id/nome seja inexistente
     pessoas.forEach(pessoa => {//laço para percorrer a lista
         if (pessoa.id == idEscolhido) {//comparar id escolhido com as pessoas que o laço está percorrendo
