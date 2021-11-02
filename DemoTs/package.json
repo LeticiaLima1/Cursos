@@ -1,8 +1,21 @@
 {
   "dependencies": {
-    "prompt-sync": "^4.2.0"
+    "express": "^4.16.4",
+    "prompt-sync": "^4.1.6"
   },
   "scripts": {
-    "start": "Atividade2c.ts"
-  }
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "name": "atividades",
+  "version": "1.0.0",
+  "main": "Atividade1a.js",
+  "devDependencies": {
+    "@types/express": "4.16.1",
+    "tslint": "5.12.1",
+    "typescript": "3.3.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
