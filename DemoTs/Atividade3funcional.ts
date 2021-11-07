@@ -15,4 +15,4 @@ function organizarValores(lista: Array<number>): Array<number>{
     return listaOrganizada; //retorna uma nova lista organizada
 }
 
-console.log(organizarValores(encontrarValores));
+console.log(organizarValores(encontrarValores));//impressão
