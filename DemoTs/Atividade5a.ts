@@ -17,4 +17,4 @@ export class Palavra{//criação da classe
 let palavra: Palavra = new Palavra();
 let nrVogais = palavra.nrVogais('leti');// criação do objeto
 
-console.log(nrVogais);//impressão do número de vogais 
+console.log(nrVogais);//impressão do número de vogais  
