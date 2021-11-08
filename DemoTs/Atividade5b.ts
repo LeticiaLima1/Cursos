@@ -7,3 +7,4 @@ const element: HTMLElement = document.getElementById('IdQuantidaDeVogais') as HT
 //tipa como HTML // e recebe o componente 
 element.innerHTML =  numeroVogais.toString(); //imprime a quantidade de vogais na tela 
 
+
