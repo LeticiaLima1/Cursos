@@ -26,13 +26,15 @@ var pessoas = [
     }
 ];
 document.getElementById("idLista").innerHTML = JSON.stringify(pessoas); //recebe valor do nome da pessoa excluída
-function alterarNome(idPessoa, idNomePessoa) {
+function alterarNome(idPessoa, idNomePessoa, idBioPessoa) {
     var idPessoaEscolhida = Number(idPessoa.value); //declaração da constante do id escolhido
     //busca do valor da constante
     var nomeInformado = idNomePessoa.value; //compara nome informado com a pessoa escolhida
+    var bioInformada = idBioPessoa.value;
     pessoas.forEach(function (pessoa) {
         if (pessoa.id === idPessoaEscolhida) { //compara id escolhido com o id da pessoa escolhida
-            pessoa.nome = nomeInformado; //altera o nome escolhido
+            pessoa.nome = nomeInformado; //altera o nome escolhido;
+            pessoa.bio = bioInformada; //altera a bio escolhida
         }
     });
     document.getElementById("idLista").innerHTML = JSON.stringify(pessoas); //recebe o novo nome

@@ -29,15 +29,17 @@ let pessoas: Array<Pessoa> = [ // declaração de lista de pessoas
 
 document.getElementById("idLista").innerHTML = JSON.stringify(pessoas); //recebe valor do nome da pessoa excluída
 
-function alterarNome(idPessoa : any, idNomePessoa : any) : void{//nome da função 
+function alterarNome(idPessoa : any, idNomePessoa : any, idBioPessoa : any) : void{//nome da função 
 
     const idPessoaEscolhida: number = Number(idPessoa.value); //declaração da constante do id escolhido
     //busca do valor da constante
     const nomeInformado: string = idNomePessoa.value; //compara nome informado com a pessoa escolhida
+    const bioInformada: string = idBioPessoa.value;
 
     pessoas.forEach(pessoa =>{//laço para percorrer a lista
         if(pessoa.id === idPessoaEscolhida){//compara id escolhido com o id da pessoa escolhida
-            pessoa.nome = nomeInformado; //altera o nome escolhido
+            pessoa.nome = nomeInformado; //altera o nome escolhido;
+            pessoa.bio = bioInformada;//altera a bio escolhida
         }
     })
     document.getElementById("idLista").innerHTML = JSON.stringify(pessoas);//recebe o novo nome
